@@ -43,6 +43,10 @@
     .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding-bottom 0.3s ease; padding-bottom: 0; }
     .faq-answer.open { max-height: 2000px; padding-bottom: 1.25rem; }
     nav a.nav-active { border-bottom: 2px solid #2D5F3F; }
+    #bottomNav a { color: #2A2A2A60; transition: color 0.2s; }
+    #bottomNav a.nav-active { color: #2D5F3F; border-bottom: none; }
+    #bottomNav a.nav-active i { stroke: #2D5F3F; }
+    @media (max-width: 767px) { .page { padding-bottom: 68px; } }
     .card-hover { transition: transform 0.2s ease; }
     .card-hover:hover { transform: translateY(-4px); }
     body { box-sizing: border-box; }
@@ -82,11 +86,40 @@
         <a href="#products" class="nav-link text-seed" data-page="products">西瓜介紹</a>
         <a href="#order" class="nav-link text-seed" data-page="order">訂購流程</a>
         <a href="#contact" class="nav-link text-seed" data-page="contact">聯絡我們</a>
+        <a href="#gallery" class="nav-link text-seed" data-page="gallery">農場實景</a>
         <a href="https://lin.ee/o5B7kLd" target="_blank" rel="noopener noreferrer"
            class="bg-melon-deep text-white px-4 py-2 text-center rounded font-bold">加入 LINE</a>
       </nav>
     </div>
   </header>
+
+  <!-- Bottom Navigation (mobile only) -->
+  <nav id="bottomNav" class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-rice border-t border-melon-deep/20 flex">
+    <a href="#home" class="nav-link flex-1 flex flex-col items-center justify-center py-2 gap-0.5" data-page="home">
+      <i data-lucide="home" style="width:20px;height:20px;"></i>
+      <span style="font-size:10px;">首頁</span>
+    </a>
+    <a href="#about" class="nav-link flex-1 flex flex-col items-center justify-center py-2 gap-0.5" data-page="about">
+      <i data-lucide="users" style="width:20px;height:20px;"></i>
+      <span style="font-size:10px;">關於</span>
+    </a>
+    <a href="#products" class="nav-link flex-1 flex flex-col items-center justify-center py-2 gap-0.5" data-page="products">
+      <i data-lucide="package" style="width:20px;height:20px;"></i>
+      <span style="font-size:10px;">西瓜</span>
+    </a>
+    <a href="#order" class="nav-link flex-1 flex flex-col items-center justify-center py-2 gap-0.5" data-page="order">
+      <i data-lucide="clipboard-list" style="width:20px;height:20px;"></i>
+      <span style="font-size:10px;">訂購</span>
+    </a>
+    <a href="#contact" class="nav-link flex-1 flex flex-col items-center justify-center py-2 gap-0.5" data-page="contact">
+      <i data-lucide="phone" style="width:20px;height:20px;"></i>
+      <span style="font-size:10px;">聯絡</span>
+    </a>
+    <a href="#gallery" class="nav-link flex-1 flex flex-col items-center justify-center py-2 gap-0.5" data-page="gallery">
+      <i data-lucide="camera" style="width:20px;height:20px;"></i>
+      <span style="font-size:10px;">農場</span>
+    </a>
+  </nav>
 
   <!-- PAGE 1: HOME -->
   <div id="page-home" class="page active">
